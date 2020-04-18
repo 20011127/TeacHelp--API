@@ -1,0 +1,41 @@
+{
+  "name": "teachelp--api",
+  "version": "1.0.0",
+  "description": "Nodejs api for TeacHelp project",
+  "main": "./src/index.js",
+  "scripts": {
+    "build": "./node_modules/.bin/babel src --out-dir lib",
+    "dev": "npm run build && node ./lib/index.js",
+    "test": "jest --coverage --detectOpenHandles"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/20011127/TeacHelp--API.git"
+  },
+  "author": "Witch",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/20011127/TeacHelp--API/issues"
+  },
+  "homepage": "https://github.com/20011127/TeacHelp--API#readme",
+  "devDependencies": {
+    "@babel/cli": "^7.8.4",
+    "@babel/core": "^7.9.0",
+    "@babel/plugin-transform-modules-commonjs": "^7.9.0",
+    "@babel/plugin-transform-runtime": "^7.9.0",
+    "@babel/preset-env": "^7.9.5",
+    "codacy-coverage": "^3.4.0",
+    "eslint": "^6.8.0",
+    "eslint-config-standard": "^14.1.1",
+    "eslint-plugin-import": "^2.20.2",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-standard": "^4.0.1",
+    "jest": "^25.3.0",
+    "jsdoc": "^3.6.4"
+  },
+  "dependencies": {
+    "@babel/runtime": "^7.9.2",
+    "express": "^4.17.1"
+  }
+}
