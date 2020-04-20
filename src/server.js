@@ -1,9 +1,10 @@
 import express from 'express'
+import initRoutes from './routes/initRoutes'
+require('dotenv').config()
+
 const app = express()
 const port = 3000
 
-app.get('/', function (req, res) {
-  res.send('Hello World')
-})
+initRoutes(app)
 
 app.listen(port, () => console.log(`Example app listening at http://localhost:${port}`))
