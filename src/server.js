@@ -1,5 +1,5 @@
 import express from 'express'
-import initRoutes from './routes/initRoutes'
+import initRoutes from './api/routes/initRoutes'
 require('dotenv').config()
 
 const app = express()
