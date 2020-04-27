@@ -1,10 +1,12 @@
-export default (sequelize, type) => {
+import Sequelize from 'sequelize'
+
+export default (sequelize) => {
   return sequelize.define('classroom', {
     id: {
-      type: type.INTEGER,
+      type: Sequelize.INTEGER,
       primaryKey: true,
       autoIncrement: true
     },
-    name: type.STRING
+    name: Sequelize.STRING
   })
 }

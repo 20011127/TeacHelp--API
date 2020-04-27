@@ -1,10 +1,23 @@
 import express from 'express'
-import initRoutes from './api/routes/initRoutes'
 require('dotenv').config()
 
-const app = express()
 const port = 3000
 
-initRoutes(app)
+async function startServer () {
+  const app = express()
+  await require('./loaders').default(app)
 
-app.listen(port, () => console.log(`Example app listening at http://localhost:${port}`))
+  app.listen(port, err => {
+    if (err) {
+      console.error(err)
+      process.exit(1)
+    }
+    console.log(`
+      ###################################################
+      🛡️  Server listening on http://localhost:${port} 🛡️ 
+      ###################################################
+    `)
+  })
+}
+
+startServer()
